@@ -1,0 +1,90 @@
+Welcome to Go
+
+Patrick Oyarzun
+
+* Go
+
+.link https://golang.org golang.org:
+
+    Go is an open source programming language that makes 
+    it easy to build simple, reliable, and efficient software.
+
+Created at Google in 2009 and released in 2012.
+
+dl.google.com, docker, kubernetes, cloud foundry, many more
+
+
+* Syntax
+
+.code primes-forever/main.go  /PRIME/,/END PRIME/
+
+
+* Concurrency
+
+.code primes-forever/main.go  /GENERATE/,/END GENERATE/
+
+
+* What makes Go special?
+
+No classes, no inheritance, just interfaces
+Compatibility promise
+First class concurrency
+Gofmt
+
+: Gofmt's style is no one's favorite, yet gofmt is everyone's favorite.
+
+* Interfaces
+
+* Interfaces
+
+.code interfaces/main.go  /INTERFACE/,/END INTERFACE/
+
+: Verb-er, not verb-able
+: Method 'receiver' vs arguments vs return
+: No 'implements' keyword, interfaces are structurally typed
+: This means you can invert dependencies on external packages without delegation
+
+* Compatibility
+
+* Compatibility Promise
+
+.link https://golang.org/doc/go1compat Go 1 and the Future of Go Programs
+
+    [...] It is intended that programs written to the Go 1 specification 
+    will continue to compile and run correctly, unchanged, over the 
+    lifetime of that specification. [...]
+
+Since release on 28 March 2012, there have been *three* breaking changes to
+the language. All indicated buggy / incorrect programs before the change.
+
+
+* 6 years of breaking changes
+
+1.0 - Language declared stable
+1.1 - Everything still works
+1.2 - 1 breaking change for memory unsafe programs
+1.3 - 1 breaking change for memory unsafe programs
+1.4 - 1 breaking change to fix a compiler bug
+1.5 - Everything still works (Compiler is now written in Go!)
+1.6 - Everything still works
+1.7 - Everything still works
+1.8 - Everything still works
+1.9 - Everything still works
+1.10 - Everything still works
+
+* Concurrency
+
+
+
+* Philosophy
+
+Less is more
+Share memory by communicating
+
+
+* More Reading
+
+.link https://go-proverbs.github.io/ https://go-proverbs.github.io/ - Go Proverbs
+.link https://golang.org/doc/effective_go.html https://golang.org/doc/effective_go.html - Effective Go
+.link https://golang.org/doc/go1compat https://golang.org/doc/go1compat - Go 1 Compatibility
+
