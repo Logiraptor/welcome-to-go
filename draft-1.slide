@@ -2,49 +2,73 @@ Welcome to Go
 
 Patrick Oyarzun
 
+* About me
+
+- Gopher since 2012
+- Really bad at cross words
+
+* Agenda
+
+- Why does Go exist?
+- What makes it special?
+- Demo project
+
+* Why Go?
+
+- Building distributed systems is hard
+- C++ is unsafe, complex, and ill-suited to modern, highly parallel jobs
+- People are bad at getting it right
+- Go focuses on scalability of machines and people
+
 * Go
 
-.link https://golang.org golang.org:
+- Compiled to machine code
+- Statically typed
+- Garbage collected
+- Multi-paradigm
+- Simple philosophy
+- Useful by default
 
-    Go is an open source programming language that makes 
-    it easy to build simple, reliable, and efficient software.
+* Hello World
 
-Created at Google in 2009 and released in 2012.
+.play ./example/hello_world.go
 
-dl.google.com, docker, kubernetes, cloud foundry, many more
+* Lightweight, consistent syntax
 
+This is Go:
+.code ./people-scaling/prime-good.go /START/,/END/
+This is not:
+.code ./people-scaling/prime-bad.go /START/,/END/
 
-* Syntax
+* Simple type system
 
-.code primes-forever/main.go  /PRIME/,/END PRIME/
-
+.code people-scaling/types.go /START/,/END/
 
 * Concurrency
 
-.code primes-forever/main.go  /GENERATE/,/END GENERATE/
+.play ./concurrency/main.go
 
+* Concurrency
 
-* What makes Go special?
+.play ./concurrency-2/main.go
 
-No classes, no inheritance, just interfaces
-Compatibility promise
-First class concurrency
-Gofmt
+* Concurrency
 
-: Gofmt's style is no one's favorite, yet gofmt is everyone's favorite.
+.play ./concurrency-3/main.go
 
-* Interfaces
+* Concurrency
 
-* Interfaces
+.play ./concurrency-4/main.go /func main/,/done/
 
-.code interfaces/main.go  /INTERFACE/,/END INTERFACE/
+* Tools
 
-: Verb-er, not verb-able
-: Method 'receiver' vs arguments vs return
-: No 'implements' keyword, interfaces are structurally typed
-: This means you can invert dependencies on external packages without delegation
-
-* Compatibility
+go build
+go run
+go test
+go vet
+go fmt
+golint
+go tool pprof
 
 * Compatibility Promise
 
@@ -58,29 +82,31 @@ Since release on 28 March 2012, there have been *three* breaking changes to
 the language. All indicated buggy / incorrect programs before the change.
 
 
-* 6 years of breaking changes
+# * 6 years of breaking changes
+#
+# 1.0 - Language declared stable
+# 1.1 - Everything still works
+# 1.2 - 1 breaking change for memory unsafe programs
+# 1.3 - 1 breaking change for memory unsafe programs
+# 1.4 - 1 breaking change to fix a compiler bug
+# 1.5 - Everything still works (Compiler is now written in Go!)
+# 1.6 - Everything still works
+# 1.7 - Everything still works
+# 1.8 - Everything still works
+# 1.9 - Everything still works
+# 1.10 - Everything still works
 
-1.0 - Language declared stable
-1.1 - Everything still works
-1.2 - 1 breaking change for memory unsafe programs
-1.3 - 1 breaking change for memory unsafe programs
-1.4 - 1 breaking change to fix a compiler bug
-1.5 - Everything still works (Compiler is now written in Go!)
-1.6 - Everything still works
-1.7 - Everything still works
-1.8 - Everything still works
-1.9 - Everything still works
-1.10 - Everything still works
+* Demo project
 
-* Concurrency
+: Show the site, what it does.
+: Show core domain 'zero overhead abstractions'
+: Smarty concurrency 'simple enough for me to make it correct'
+: cpu pprof results for speedy
+: use suggestions system to show improvements in the algorithm over time
+: show main.go
+: show endpoints.go RenderBoard is simple
 
-
-
-* Philosophy
-
-Less is more
-Share memory by communicating
-
+.link https://word-bot.pcfbeta.io
 
 * More Reading
 
