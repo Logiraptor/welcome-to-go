@@ -4,8 +4,9 @@ Patrick Oyarzun
 
 * About me
 
-- Gopher since 2012
-- Really bad at cross words
+- Backend Go developer 4 years pre-Pivotal
+- Still writing Go ~daily on side projects
+- Really bad at Scrabble
 
 * Agenda
 
@@ -20,9 +21,15 @@ Patrick Oyarzun
 - People are bad at getting it right
 - Go focuses on scalability of machines and people
 
+: Rob Pike
+: Ken Thompson
+: Robert Griesemer
+: Frustrated with C++ compile times
+: 3-way Consensus driven
+
 * Go
 
-- Compiled to machine code
+- Compiled to single statically linked binary
 - Statically typed
 - Garbage collected
 - Multi-paradigm
@@ -70,18 +77,6 @@ go fmt
 golint
 go tool pprof
 
-* Compatibility Promise
-
-.link https://golang.org/doc/go1compat Go 1 and the Future of Go Programs
-
-    [...] It is intended that programs written to the Go 1 specification 
-    will continue to compile and run correctly, unchanged, over the 
-    lifetime of that specification. [...]
-
-Since release on 28 March 2012, there have been *three* breaking changes to
-the language. All indicated buggy / incorrect programs before the change.
-
-
 # * 6 years of breaking changes
 #
 # 1.0 - Language declared stable
@@ -96,7 +91,7 @@ the language. All indicated buggy / incorrect programs before the change.
 # 1.9 - Everything still works
 # 1.10 - Everything still works
 
-* Demo project
+* Scrabble bot
 
 : Show the site, what it does.
 : Show core domain 'zero overhead abstractions'
